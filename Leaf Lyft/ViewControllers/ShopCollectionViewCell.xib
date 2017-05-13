@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ShopCollectionViewCell" customModule="Leaf_Lyft" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="127" height="339"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="127" height="339"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nw0-Zb-qAx">
+                        <rect key="frame" x="0.0" y="0.0" width="127" height="339"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cxa-ak-tmS">
+                                <rect key="frame" x="0.0" y="0.0" width="127" height="206"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="206" id="CFQ-oA-8lw"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jCI-nD-mn7">
+                                <rect key="frame" x="9" y="215" width="109" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QCm-T2-o21">
+                                <rect key="frame" x="9" y="243.5" width="109" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="QCm-T2-o21" firstAttribute="leading" secondItem="nw0-Zb-qAx" secondAttribute="leading" constant="9" id="1YY-RJ-ORo"/>
+                            <constraint firstAttribute="trailing" secondItem="jCI-nD-mn7" secondAttribute="trailing" constant="9" id="1oN-s8-hio"/>
+                            <constraint firstItem="cxa-ak-tmS" firstAttribute="top" secondItem="nw0-Zb-qAx" secondAttribute="top" id="GPm-ZN-8f0"/>
+                            <constraint firstItem="cxa-ak-tmS" firstAttribute="leading" secondItem="nw0-Zb-qAx" secondAttribute="leading" id="MMa-Qb-gFz"/>
+                            <constraint firstAttribute="trailing" secondItem="cxa-ak-tmS" secondAttribute="trailing" id="VOh-um-DRG"/>
+                            <constraint firstAttribute="trailing" secondItem="QCm-T2-o21" secondAttribute="trailing" constant="9" id="bqc-UZ-bLp"/>
+                            <constraint firstItem="QCm-T2-o21" firstAttribute="top" secondItem="jCI-nD-mn7" secondAttribute="bottom" constant="8" id="qqF-iN-DAL"/>
+                            <constraint firstItem="jCI-nD-mn7" firstAttribute="leading" secondItem="nw0-Zb-qAx" secondAttribute="leading" constant="9" id="uRe-Px-LKg"/>
+                            <constraint firstItem="jCI-nD-mn7" firstAttribute="top" secondItem="cxa-ak-tmS" secondAttribute="bottom" constant="9" id="zCU-Oa-S4e"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="nw0-Zb-qAx" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="9WN-G6-oHx"/>
+                <constraint firstAttribute="bottom" secondItem="nw0-Zb-qAx" secondAttribute="bottom" id="fwB-Xi-R6H"/>
+                <constraint firstItem="nw0-Zb-qAx" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="n6R-AM-zxn"/>
+                <constraint firstAttribute="trailing" secondItem="nw0-Zb-qAx" secondAttribute="trailing" id="oK4-hw-zR7"/>
+            </constraints>
+            <size key="customSize" width="127" height="339"/>
+            <connections>
+                <outlet property="containerView" destination="nw0-Zb-qAx" id="YPF-a8-bpR"/>
+                <outlet property="nameLabel" destination="jCI-nD-mn7" id="1a2-zS-P3O"/>
+                <outlet property="photoView" destination="cxa-ak-tmS" id="1Nl-QA-Zld"/>
+                <outlet property="priceLabel" destination="QCm-T2-o21" id="Vbj-7N-fb6"/>
+            </connections>
+            <point key="canvasLocation" x="63.5" y="196.5"/>
+        </collectionViewCell>
+    </objects>
+</document>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="lUk-qk-rDt">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Shop View Controller-->
+        <scene sceneID="RK8-QQ-4MX">
+            <objects>
+                <viewController id="lUk-qk-rDt" customClass="ShopViewController" customModule="Leaf_Lyft" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="laQ-Uq-FDw"/>
+                        <viewControllerLayoutGuide type="bottom" id="NZl-lY-ERD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dcu-nV-3Wa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tYI-Yl-mr2" customClass="NavBarView" customModule="Leaf_Lyft" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="63"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="63" id="kYM-QZ-mdu"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="ic-back-yollow"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="rightImage" value="ic-search"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Apparel and accessories"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="caL-vN-bnT">
+                                <rect key="frame" x="0.0" y="63" width="375" height="604"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewLayout key="collectionViewLayout" id="14Y-D2-dEb" customClass="TwoColumnFlowLayout" customModule="Leaf_Lyft" customModuleProvider="target"/>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="lUk-qk-rDt" id="PXI-LA-efO"/>
+                                    <outlet property="delegate" destination="lUk-qk-rDt" id="CQW-X3-JdO"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="caL-vN-bnT" secondAttribute="bottom" id="9fI-lC-6Yz"/>
+                            <constraint firstItem="tYI-Yl-mr2" firstAttribute="top" secondItem="dcu-nV-3Wa" secondAttribute="top" id="BK9-sO-sJO"/>
+                            <constraint firstAttribute="trailing" secondItem="tYI-Yl-mr2" secondAttribute="trailing" id="DKU-Ad-3sg"/>
+                            <constraint firstItem="caL-vN-bnT" firstAttribute="top" secondItem="tYI-Yl-mr2" secondAttribute="bottom" id="KrY-Qr-Cox"/>
+                            <constraint firstItem="caL-vN-bnT" firstAttribute="leading" secondItem="dcu-nV-3Wa" secondAttribute="leading" id="bTY-hk-YAr"/>
+                            <constraint firstAttribute="trailing" secondItem="caL-vN-bnT" secondAttribute="trailing" id="evu-vg-f5q"/>
+                            <constraint firstItem="tYI-Yl-mr2" firstAttribute="leading" secondItem="dcu-nV-3Wa" secondAttribute="leading" id="jFj-1s-Sa5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="caL-vN-bnT" id="NaE-tu-FCd"/>
+                        <outlet property="navBarView" destination="tYI-Yl-mr2" id="tfn-8W-gr1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sTt-Zt-1fE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="98" y="128"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ic-back-yollow" width="18" height="18"/>
+        <image name="ic-search" width="19" height="19"/>
+    </resources>
+</document>

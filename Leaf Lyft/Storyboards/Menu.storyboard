@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="7ii-Cf-VDK">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Menu View Controller-->
+        <scene sceneID="4O3-1c-Hah">
+            <objects>
+                <viewController id="7ii-Cf-VDK" customClass="MenuViewController" customModule="Leaf_Lyft" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="k7Z-bh-Tv0"/>
+                        <viewControllerLayoutGuide type="bottom" id="43p-Tr-iDG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="db0-S4-yjZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gOz-qI-R2C">
+                                <rect key="frame" x="0.0" y="80" width="375" height="587"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="7ii-Cf-VDK" id="w7H-oS-OLe"/>
+                                    <outlet property="delegate" destination="7ii-Cf-VDK" id="e0A-ni-DFk"/>
+                                </connections>
+                            </tableView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic-close" translatesAutoresizingMaskIntoConstraints="NO" id="CNt-Ml-ZLe">
+                                <rect key="frame" x="344" y="33" width="21" height="21"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Kf-KZ-u3h">
+                                <rect key="frame" x="325" y="0.0" width="50" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="SG0-Z2-0OZ"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="closeAction" destination="7ii-Cf-VDK" eventType="touchUpInside" id="idP-Qo-h9h"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="CNt-Ml-ZLe" firstAttribute="top" secondItem="db0-S4-yjZ" secondAttribute="top" constant="33" id="6TL-Ez-Pal"/>
+                            <constraint firstItem="6Kf-KZ-u3h" firstAttribute="top" secondItem="db0-S4-yjZ" secondAttribute="top" id="KpH-zn-ada"/>
+                            <constraint firstItem="gOz-qI-R2C" firstAttribute="top" secondItem="6Kf-KZ-u3h" secondAttribute="bottom" id="QgE-mR-LYg"/>
+                            <constraint firstAttribute="bottom" secondItem="gOz-qI-R2C" secondAttribute="bottom" id="Uiw-tX-oRW"/>
+                            <constraint firstAttribute="trailing" secondItem="6Kf-KZ-u3h" secondAttribute="trailing" id="VIl-Ak-qxd"/>
+                            <constraint firstItem="gOz-qI-R2C" firstAttribute="leading" secondItem="db0-S4-yjZ" secondAttribute="leading" id="abf-m4-Q6f"/>
+                            <constraint firstItem="gOz-qI-R2C" firstAttribute="top" secondItem="db0-S4-yjZ" secondAttribute="top" constant="80" id="dt8-4u-blq"/>
+                            <constraint firstAttribute="trailing" secondItem="CNt-Ml-ZLe" secondAttribute="trailing" constant="10" id="h6M-V2-TwZ"/>
+                            <constraint firstAttribute="trailing" secondItem="gOz-qI-R2C" secondAttribute="trailing" id="hrx-0P-kWO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="gOz-qI-R2C" id="Inh-C2-Hi6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Gx-tv-EEi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="42" y="159"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ic-close" width="21" height="21"/>
+    </resources>
+</document>

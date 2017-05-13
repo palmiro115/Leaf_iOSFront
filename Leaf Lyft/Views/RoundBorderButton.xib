@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RoundBorderButton" customModule="Leaf_Lyft" customModuleProvider="target">
+            <connections>
+                <outlet property="button" destination="nbR-1v-nfV" id="QrE-tJ-bOk"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="lim-wv-hhY">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nbR-1v-nfV">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="nbR-1v-nfV" secondAttribute="trailing" id="8PH-3A-Fvq"/>
+                <constraint firstAttribute="bottom" secondItem="nbR-1v-nfV" secondAttribute="bottom" id="WyN-e4-sQ4"/>
+                <constraint firstItem="nbR-1v-nfV" firstAttribute="top" secondItem="lim-wv-hhY" secondAttribute="top" id="g3T-xk-x44"/>
+                <constraint firstItem="nbR-1v-nfV" firstAttribute="leading" secondItem="lim-wv-hhY" secondAttribute="leading" id="zGd-zi-TZ0"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-150" y="22"/>
+        </view>
+    </objects>
+</document>

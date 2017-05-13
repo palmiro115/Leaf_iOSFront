@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AxK-un-pRg">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="e0W-eV-BQA">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="AxK-un-pRg" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Yix-b8-QMt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="bh6-bA-Lti" kind="relationship" relationship="rootViewController" id="QC7-O3-b20"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wmu-ay-54b" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-665" y="123"/>
+        </scene>
+        <!--News View Controller-->
+        <scene sceneID="gh6-Dy-nXT">
+            <objects>
+                <viewController id="bh6-bA-Lti" customClass="NewsViewController" customModule="Leaf_Lyft" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gYb-yy-5mP"/>
+                        <viewControllerLayoutGuide type="bottom" id="4w9-va-26n"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PAW-on-Fih">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bld-yA-rkF" customClass="NavBarView" customModule="Leaf_Lyft" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="63"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="63" id="lk3-hF-b75"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="ic-menu"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="rightImage" value="ic-search"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Your Newsfeed"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ztk-tr-3i4">
+                                <rect key="frame" x="0.0" y="63" width="375" height="604"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="bh6-bA-Lti" id="mzL-PL-9jl"/>
+                                    <outlet property="delegate" destination="bh6-bA-Lti" id="lCr-76-VYG"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ztk-tr-3i4" firstAttribute="top" secondItem="Bld-yA-rkF" secondAttribute="bottom" id="1pM-LB-qFR"/>
+                            <constraint firstItem="Bld-yA-rkF" firstAttribute="leading" secondItem="PAW-on-Fih" secondAttribute="leading" id="Fsz-lz-XyC"/>
+                            <constraint firstItem="Bld-yA-rkF" firstAttribute="top" secondItem="PAW-on-Fih" secondAttribute="top" id="cG7-En-hNP"/>
+                            <constraint firstAttribute="trailing" secondItem="ztk-tr-3i4" secondAttribute="trailing" id="hx2-Gg-0Fm"/>
+                            <constraint firstAttribute="trailing" secondItem="Bld-yA-rkF" secondAttribute="trailing" id="j5h-dI-1iZ"/>
+                            <constraint firstAttribute="bottom" secondItem="ztk-tr-3i4" secondAttribute="bottom" id="p5L-c7-NPO"/>
+                            <constraint firstItem="ztk-tr-3i4" firstAttribute="leading" secondItem="PAW-on-Fih" secondAttribute="leading" id="xhh-Ue-bl8"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="pnp-bc-ezw"/>
+                    <connections>
+                        <outlet property="navBarView" destination="Bld-yA-rkF" id="zEq-fy-GWA"/>
+                        <outlet property="tableView" destination="ztk-tr-3i4" id="z0g-J0-ekN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qnb-zo-TfF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="68" y="123"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ic-menu" width="24" height="17"/>
+        <image name="ic-search" width="19" height="19"/>
+    </resources>
+</document>

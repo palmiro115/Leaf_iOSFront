@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="6cx-Al-mkQ">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Lato-Light.ttf">
+            <string>Lato-Light</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Enter View Controller-->
+        <scene sceneID="gCI-zN-RtO">
+            <objects>
+                <viewController id="6cx-Al-mkQ" customClass="EnterViewController" customModule="Leaf_Lyft" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WCJ-0h-Q3s"/>
+                        <viewControllerLayoutGuide type="bottom" id="1tV-Q6-Ksf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Q2G-Hf-oIa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash-bg" translatesAutoresizingMaskIntoConstraints="NO" id="s6i-ru-jru">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QDW-d2-Xas">
+                                <rect key="frame" x="0.0" y="63" width="375" height="604"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash-logo" translatesAutoresizingMaskIntoConstraints="NO" id="OTe-jh-YPH">
+                                        <rect key="frame" x="39" y="106" width="256" height="266"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copyright 2017" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5qm-h7-fYv">
+                                        <rect key="frame" x="143" y="571" width="89" height="16"/>
+                                        <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="13"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="5qm-h7-fYv" secondAttribute="bottom" constant="17" id="K1g-zo-CC8"/>
+                                    <constraint firstItem="5qm-h7-fYv" firstAttribute="centerX" secondItem="QDW-d2-Xas" secondAttribute="centerX" id="LJM-uZ-1xC"/>
+                                    <constraint firstItem="OTe-jh-YPH" firstAttribute="centerY" secondItem="QDW-d2-Xas" secondAttribute="centerY" constant="-63" id="Wbj-QW-pHl"/>
+                                    <constraint firstItem="OTe-jh-YPH" firstAttribute="centerX" secondItem="QDW-d2-Xas" secondAttribute="centerX" constant="-24" id="dTM-po-6V9">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="-21"/>
+                                    </constraint>
+                                </constraints>
+                            </view>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FSB-xD-WCP">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="s6i-ru-jru" secondAttribute="bottom" id="4aT-s5-aSY"/>
+                            <constraint firstAttribute="bottom" secondItem="QDW-d2-Xas" secondAttribute="bottom" id="7cg-se-Ppj"/>
+                            <constraint firstAttribute="bottom" secondItem="FSB-xD-WCP" secondAttribute="bottom" id="AyL-5p-SFb"/>
+                            <constraint firstAttribute="trailing" secondItem="QDW-d2-Xas" secondAttribute="trailing" id="CBA-Ak-pbB"/>
+                            <constraint firstItem="FSB-xD-WCP" firstAttribute="top" secondItem="Q2G-Hf-oIa" secondAttribute="top" id="Iup-XZ-uqX"/>
+                            <constraint firstAttribute="trailing" secondItem="s6i-ru-jru" secondAttribute="trailing" id="LY8-h7-lzb"/>
+                            <constraint firstItem="QDW-d2-Xas" firstAttribute="top" secondItem="Q2G-Hf-oIa" secondAttribute="top" constant="63" id="deP-tL-bOv"/>
+                            <constraint firstItem="FSB-xD-WCP" firstAttribute="leading" secondItem="Q2G-Hf-oIa" secondAttribute="leading" id="gLp-AO-2PX"/>
+                            <constraint firstItem="s6i-ru-jru" firstAttribute="leading" secondItem="Q2G-Hf-oIa" secondAttribute="leading" id="pyc-uM-X4j"/>
+                            <constraint firstAttribute="trailing" secondItem="FSB-xD-WCP" secondAttribute="trailing" id="r8W-8g-2kr"/>
+                            <constraint firstItem="QDW-d2-Xas" firstAttribute="leading" secondItem="Q2G-Hf-oIa" secondAttribute="leading" id="u92-O4-jqk"/>
+                            <constraint firstItem="s6i-ru-jru" firstAttribute="top" secondItem="Q2G-Hf-oIa" secondAttribute="top" id="yCT-TQ-JKA"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="screenView" destination="FSB-xD-WCP" id="qF0-yq-1uV"/>
+                        <segue destination="fNT-VB-5w5" kind="presentation" identifier="AuthPresent" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="s4n-pZ-bvO"/>
+                        <segue destination="E6r-1H-ReS" kind="presentation" identifier="NewsPresent" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="T5w-rD-6cb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D8D-Ed-TIL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="474" y="189"/>
+        </scene>
+        <!--Auth-->
+        <scene sceneID="dSB-vq-eyT">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Auth" id="fNT-VB-5w5" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MLR-lc-lrA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1155" y="-109"/>
+        </scene>
+        <!--News-->
+        <scene sceneID="t2e-BO-WuC">
+            <objects>
+                <viewControllerPlaceholder storyboardName="News" id="E6r-1H-ReS" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r75-6s-eEz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1158" y="247"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="splash-bg" width="750" height="1334"/>
+        <image name="splash-logo" width="256" height="266"/>
+    </resources>
+</document>

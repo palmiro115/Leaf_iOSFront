@@ -1,0 +1,5 @@
+Pods/
+.DS_Store
+Podfile.lock
+Leaf Lyft.xcodeproj/xcuserdata
+Leaf Lyft.xcworkspace

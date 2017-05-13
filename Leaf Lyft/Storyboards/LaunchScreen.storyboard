@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Lato-Light.ttf">
+            <string>Lato-Light</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Llm-lL-Icb"/>
+                        <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash-bg" translatesAutoresizingMaskIntoConstraints="NO" id="VOg-e4-WCb">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SNA-dl-12p">
+                                <rect key="frame" x="0.0" y="63" width="320" height="505"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash-logo" translatesAutoresizingMaskIntoConstraints="NO" id="Bpt-3V-HGc">
+                                        <rect key="frame" x="11" y="57" width="256" height="266"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copyright 2017" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GFF-yS-xg6">
+                                        <rect key="frame" x="116" y="472" width="89" height="16"/>
+                                        <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="13"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="Bpt-3V-HGc" firstAttribute="centerY" secondItem="SNA-dl-12p" secondAttribute="centerY" constant="-63" id="0w3-rb-ybe"/>
+                                    <constraint firstAttribute="bottom" secondItem="GFF-yS-xg6" secondAttribute="bottom" constant="17" id="FEE-5z-LJW"/>
+                                    <constraint firstItem="Bpt-3V-HGc" firstAttribute="centerX" secondItem="SNA-dl-12p" secondAttribute="centerX" constant="-24" id="O0z-Jb-b4v">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="-21"/>
+                                    </constraint>
+                                    <constraint firstItem="GFF-yS-xg6" firstAttribute="centerX" secondItem="SNA-dl-12p" secondAttribute="centerX" id="T2w-R8-dX0"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="SNA-dl-12p" secondAttribute="trailing" id="Dy3-qX-Xok"/>
+                            <constraint firstItem="VOg-e4-WCb" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="Leb-f3-z9P"/>
+                            <constraint firstAttribute="trailing" secondItem="VOg-e4-WCb" secondAttribute="trailing" id="UaV-rz-1KC"/>
+                            <constraint firstItem="SNA-dl-12p" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" constant="63" id="XTk-QV-Axw"/>
+                            <constraint firstAttribute="bottom" secondItem="VOg-e4-WCb" secondAttribute="bottom" id="dxC-1j-4AY"/>
+                            <constraint firstAttribute="bottom" secondItem="SNA-dl-12p" secondAttribute="bottom" id="sa6-2e-i7m"/>
+                            <constraint firstItem="VOg-e4-WCb" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="viW-X2-PMj"/>
+                            <constraint firstItem="SNA-dl-12p" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="yTe-sw-n83"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="splash-bg" width="750" height="1334"/>
+        <image name="splash-logo" width="256" height="266"/>
+    </resources>
+</document>

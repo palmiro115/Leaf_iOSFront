@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="rR8-bP-e5i">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Text View Controller-->
+        <scene sceneID="Ogk-C6-Kro">
+            <objects>
+                <viewController id="rR8-bP-e5i" customClass="TextViewController" customModule="Leaf_Lyft" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8Ou-cm-Wj4"/>
+                        <viewControllerLayoutGuide type="bottom" id="c32-rX-ddd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1mS-ui-PFQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WQX-Sp-bTb" customClass="NavBarView" customModule="Leaf_Lyft" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="63"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="63" id="q66-yl-8i5"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="ic-back-yollow"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Our Goals"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="jPU-xQ-aW7">
+                                <rect key="frame" x="0.0" y="63" width="375" height="604"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="WQX-Sp-bTb" firstAttribute="top" secondItem="1mS-ui-PFQ" secondAttribute="top" id="267-Tx-QzT"/>
+                            <constraint firstAttribute="trailing" secondItem="WQX-Sp-bTb" secondAttribute="trailing" id="5me-7h-V1m"/>
+                            <constraint firstAttribute="bottom" secondItem="jPU-xQ-aW7" secondAttribute="bottom" id="W3Q-L4-fFu"/>
+                            <constraint firstItem="WQX-Sp-bTb" firstAttribute="leading" secondItem="1mS-ui-PFQ" secondAttribute="leading" id="kPi-7N-m3Q"/>
+                            <constraint firstAttribute="trailing" secondItem="jPU-xQ-aW7" secondAttribute="trailing" id="p8i-Ca-pFn"/>
+                            <constraint firstItem="jPU-xQ-aW7" firstAttribute="leading" secondItem="1mS-ui-PFQ" secondAttribute="leading" id="xca-He-7FV"/>
+                            <constraint firstItem="jPU-xQ-aW7" firstAttribute="top" secondItem="WQX-Sp-bTb" secondAttribute="bottom" id="zYa-sK-q32"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="7i6-SO-AXQ"/>
+                    <connections>
+                        <outlet property="navBarView" destination="WQX-Sp-bTb" id="SVT-Sk-Wfh"/>
+                        <outlet property="textView" destination="jPU-xQ-aW7" id="9qq-LU-AoX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HOM-Bm-nPk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="68" y="123"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ic-back-yollow" width="18" height="18"/>
+    </resources>
+</document>
